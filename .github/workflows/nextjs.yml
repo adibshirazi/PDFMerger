@@ -72,9 +72,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: |
-          ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-          npm install react-dnd react-dnd-html5-backend framer-motion lucide-react @radix-ui/react-progress react-dropzone pdf-lib class-variance-authority clsx tailwind-merge --legacy-peer-deps
+  run: |
+    ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+    npm install react-dnd react-dnd-html5-backend framer-motion lucide-react @radix-ui/react-progress react-dropzone pdf-lib class-variance-authority clsx tailwind-merge --legacy-peer-deps
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
