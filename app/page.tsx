@@ -157,7 +157,7 @@ function PDFMerger() {
         <div className="p-6 border-b border-gray-800">
           <h1 className="text-2xl font-semibold mb-2 text-center">PDF Merger</h1>
           <p className="text-gray-400 text-sm text-center mb-4">
-            Combine PDFs and images into a single document without metadata
+            Combine PDFs and images into a single document
           </p>
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
