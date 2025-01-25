@@ -73,7 +73,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: |
-          ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+          npm ci --legacy-peer-deps
           npm install react-dnd react-dnd-html5-backend framer-motion lucide-react @radix-ui/react-progress react-dropzone pdf-lib class-variance-authority clsx tailwind-merge --legacy-peer-deps
           npm install date-fns@3.6.0 --legacy-peer-deps
 
